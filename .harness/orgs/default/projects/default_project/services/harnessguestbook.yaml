@@ -1,5 +1,5 @@
 service:
-  name: harnessguestbook
+  name: harness_guestbook
   identifier: harnessguestbook
   orgIdentifier: default
   projectIdentifier: default_project
