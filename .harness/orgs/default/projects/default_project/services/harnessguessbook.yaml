@@ -1,8 +1,1 @@
-service:
-  name: harness_guessbook
-  identifier: harnessguessbook
-  orgIdentifier: default
-  projectIdentifier: default_project
-  serviceDefinition:
-    spec: {}
-    type: Kubernetes
+
