@@ -12,8 +12,6 @@ pipeline:
         type: Deployment
         spec:
           deploymentType: Kubernetes
-          service:
-            serviceRef: harnessguestbook
           environment:
             environmentRef: harnessdevenv
             deployToAll: false
@@ -66,6 +64,11 @@ pipeline:
                   type: K8sRollingRollback
                   timeout: 10m
                   spec: {}
+          services:
+            values:
+              - serviceRef: harnessguestbook
+            metadata:
+              parallel: false
         tags: {}
         failureStrategies:
           - onFailure:
