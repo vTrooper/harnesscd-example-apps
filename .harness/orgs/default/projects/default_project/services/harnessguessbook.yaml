@@ -1,0 +1,5 @@
+service:
+  name: harnessguessbook
+  identifier: harnessguessbook
+  orgIdentifier: default
+  projectIdentifier: default_project
