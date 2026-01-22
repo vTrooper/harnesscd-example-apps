@@ -4,5 +4,23 @@ service:
   orgIdentifier: default
   projectIdentifier: default_project
   serviceDefinition:
-    spec: {}
     type: Kubernetes
+    spec:
+      manifests:
+        - manifest:
+            identifier: guestbook
+            type: K8sManifest
+            spec:
+              store:
+                type: Github
+                spec:
+                  connectorRef: harnessgitconnector
+                  gitFetchType: Branch
+                  paths:
+                    - guestbook/guestbook-ui-deployment.yaml
+                    - guestbook/guestbook-ui-svc.yaml
+                  repoName: harnesscd-example-apps
+                  branch: master
+                skipResourceVersioning: false
+                enableDeclarativeRollback: false
+  gitOpsEnabled: false
