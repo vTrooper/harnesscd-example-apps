@@ -65,7 +65,8 @@ pipeline:
                   timeout: 10m
                   spec: {}
           service:
-            serviceRef: harnessguestbook
+            serviceRef: <+input>
+            serviceInputs: <+input>
         tags: {}
         failureStrategies:
           - onFailure:
